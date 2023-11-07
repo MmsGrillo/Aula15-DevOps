@@ -1,0 +1,38 @@
+docker "comando" --help
+Listar as opções que o comando oferece
+
+docker image ls
+Listar todas imagens dockers local
+
+docker search wordpress
+Buscar imagem docker
+
+docker pull alpine
+Instalar última versão 
+
+docker pull alpine:3.12
+Instalar versão 3.12
+
+docker container ps
+Listar container em execução
+
+docker container ps -a
+Listar container já executado em algum momento
+
+docker run -it --name alpine-test 8ca4688f4f35
+Executar o container interagir e nomear (8ca4688f4f35 id da imagem alpine)
+
+docker run -p 1234:80 -d wordpress
+Executar container wordpress através da porta descrita sem travar o terminal(No navegador buscando por "localhost:1234" iniciamos o wordpress
+
+docker stop ba10a90ef870
+Parar execução do container (ba10a90ef870 container da imagem wordpress)
+
+docker rmi 24c8ece58a1a 8ca4
+Excluir imagem (24c8ece58a1a = alpine última versão e 8ca4688f4f35 = alpine 3.12)
+
+docker image rm 24c 8ca4688f4f35 -f
+Excluir imagem de forma forçada(24c8ece58a1a = alpine última versão e 8ca4688f4f35 = alpine 3.12)
+
+docker rm ba10a90ef870
+Excluir container (ba10a90ef870 container da imagem wordpress)
